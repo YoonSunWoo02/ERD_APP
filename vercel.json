@@ -22,12 +22,11 @@
       "dest": "server/api-server.js"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "widget/dist/assets/$1"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "widget/dist/index.html"
+      "dest": "/index.html"
     }
   ]
 }
