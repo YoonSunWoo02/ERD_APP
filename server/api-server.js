@@ -87,7 +87,7 @@ app.post('/api/usage', (req, res) => {
 app.get('/api/usage', (req, res) => {
   res.json({
     ok: true,
-    message: 'API 서버 실행 중입니다. 사용 횟수는 위젯에서 "JSON 붙여넣기 → 적용" 또는 "공유" 시 POST로만 차감됩니다.',
+    message: 'API  서버 실행 중입니다. 사용 횟수는 위젯에서 "JSON 붙여넣기 → 적용" 또는 "공유" 시 POST로만 차감됩니다.',
     hint: 'http://localhost:5173 에서 ERD 앱을 사용해 보세요.'
   });
 });
