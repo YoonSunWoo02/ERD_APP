@@ -1,0 +1,10 @@
+---
+description: ERD App - MCP 기반 실시간 ERD 뷰어 프로젝트 규칙
+globs: erd-app/**
+---
+
+# ERD App 프로젝트
+
+- 데이터 통신: 테이블/컬럼/PK/FK 관계를 정의한 JSON 스키마로 ChatGPT ↔ 위젯 간 교환
+- UI: React Flow 또는 Mermaid.js로 노드·연결선 렌더링
+- 기능: 원클릭 DDL 추출, 테이블 클릭 시 상세 정보, 정규화 시뮬레이션

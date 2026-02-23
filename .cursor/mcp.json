@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "erd-server": {
+      "command": "node",
+      "args": ["server/server.js"],
+      "env": {
+        "OPENAI_API_KEY": "${env:OPENAI_API_KEY}"
+      }
+    }
+  }
+}

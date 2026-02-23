@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/api-server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "widget/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "server/api-server.js" },
+    { "src": "/share/(.*)", "dest": "/widget/dist/index.html" },
+    { "src": "/(.*)", "dest": "widget/dist/$1" }
+  ]
+}
