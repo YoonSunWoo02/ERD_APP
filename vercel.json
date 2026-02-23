@@ -9,7 +9,9 @@
       "src": "widget/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist",
+        "installCommand": "npm install",
+        "buildCommand": "npm run build"
       }
     }
   ],
@@ -17,6 +19,10 @@
     {
       "source": "/api/(.*)",
       "destination": "/server/api-server.js"
+    },
+    {
+      "source": "/assets/(.*)",
+      "destination": "/widget/dist/assets/$1"
     },
     {
       "source": "/(.*)",
