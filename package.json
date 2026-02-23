@@ -2,7 +2,7 @@
   "name": "erd-app",
   "version": "1.0.0",
   "private": true,
-  "description": "ERD 뷰어 앱 (API 서버 + 위젯)",
+  "description": "ERD 뷰어 앱 (API 서버 + 위젯)!",
   "scripts": {
     "api": "cd server && node api-server.js",
     "mcp": "cd server && node server.js",
