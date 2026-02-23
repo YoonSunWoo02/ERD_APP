@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "builds": [
     {
@@ -10,23 +11,19 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist",
-        "installCommand": "npm install",
-        "buildCommand": "npm run build"
+        "installCommand": "cd widget && npm install",
+        "buildCommand": "cd widget && npm run build"
       }
     }
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/:path*",
       "destination": "/server/api-server.js"
     },
     {
-      "source": "/assets/(.*)",
-      "destination": "/widget/dist/assets/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/widget/dist/index.html"
+      "source": "/((?!api/|assets/|.*\\.(js|css|ico|png|svg|woff2?)$).*)",
+      "destination": "/index.html"
     }
   ]
 }
