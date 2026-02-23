@@ -7,15 +7,21 @@
     },
     {
       "src": "widget/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "use": "@vercel/vite"
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "server/api-server.js" },
-    { "src": "/share/(.*)", "dest": "/widget/dist/index.html" },
-    { "src": "/(.*)", "dest": "widget/dist/$1" }
+    {
+      "src": "/api/(.*)",
+      "dest": "server/api-server.js"
+    },
+    {
+      "src": "/share/(.*)",
+      "dest": "/widget/dist/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/widget/dist/$1"
+    }
   ]
 }
