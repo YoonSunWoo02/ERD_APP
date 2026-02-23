@@ -10,18 +10,14 @@
       "use": "@vercel/vite"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "server/api-server.js"
+      "source": "/api/(.*)",
+      "destination": "/server/api-server.js"
     },
     {
-      "src": "/share/(.*)",
-      "dest": "/widget/dist/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/widget/dist/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
